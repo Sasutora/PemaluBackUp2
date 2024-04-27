@@ -10,7 +10,7 @@ import Foundation
 import CoreHaptics
 
 var hapticEngine: CHHapticEngine!
-func setupHaptics() {
+public func setupHaptics() {
     do {
         hapticEngine = try CHHapticEngine()
         try hapticEngine.start()
@@ -20,7 +20,7 @@ func setupHaptics() {
 }
 
 
-func createCustomHapticPattern() -> CHHapticPattern {
+public func createCustomHapticPattern() -> CHHapticPattern {
     // Definisikan pola getaran Anda di sini
     let events: [CHHapticEvent] = [
         CHHapticEvent(eventType: .hapticContinuous,
@@ -38,7 +38,7 @@ func createCustomHapticPattern() -> CHHapticPattern {
     }
 }
 
-func playCustomHaptic() {
+public func playCustomHaptic() {
     do {
         setupHaptics()
         let pattern = createCustomHapticPattern()
