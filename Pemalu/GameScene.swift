@@ -9,6 +9,7 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 import CoreHaptics
+import AVFoundation
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -22,9 +23,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var anchoringPointNode = SKSpriteNode()
 //    var anchoringPointTexture = SKTexture()
     
+//    var hammerSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "hammerSound", ofType: "mp3")!)
+//    var audioPlayer = AVAudioPlayer()
     
+    let sounds = Sounds()
+    let pitches:[Float] = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0]
+//
     
     override func didMove(to view: SKView) {
+        
+        
         
         self.physicsWorld.contactDelegate = self
         
@@ -40,6 +48,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //                targetBody.isDynamic = false
 //                target.physicsBody = targetBody
 //        targetBody.categoryBitMask = 2
+        
+        sounds.preload("Hammer sound")
         
         manager.startAccelerometerUpdates()
         manager.accelerometerUpdateInterval = 0.05
@@ -66,7 +76,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let pinJoint = SKPhysicsJointPin.joint(withBodyA: anchoringPointBody, bodyB: playerBody, anchor: CGPoint(x: 221.561, y: 106.796))
         self.physicsWorld.add(pinJoint)
         
+//        try! audioPlayer = AVAudioPlayer(contentsOf: hammerSound as URL, fileTypeHint: nil)
+//        audioPlayer.prepareToPlay()
         
+        
+        
+        self.sounds.play("Hammer sound")
         
     }
     
@@ -82,6 +97,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        var sum:Int = 0
 //        print("Testing")
 //        || (bodyA.categoryBitMask == 2 && bodyB.categoryBitMask == 1
+        
+        sounds.play("Hammer sound")
+        print("something")
+        
+        
         if startMotionUpdates() && (bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2){
             
             //EndScene
@@ -89,7 +109,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            if startMotionUpdates() > 3.0{
 //                startMotionUpdates()
             playCustomHaptic()
-                sum+=1
+//            playHammerSound()
+//            playSound(sound)
+//            audioPlayer.play()
+            
+            sum+=1
             if sum % 2 == 0{
                 sumHit /= 2
                 print(sumHit+1)
@@ -109,14 +133,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didEnd(_ contact: SKPhysicsContact) {
         
-        let bodyA = contact.bodyA
-        let bodyB = contact.bodyB
-        
-        if (bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2){
-            flag = false
-        }
+//        let bodyA = contact.bodyA
+//        let bodyB = contact.bodyB
+//        
+//        if (bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2){
+//            flag = false
+//        }
+        sounds.play("Hammer sound")
     }
     
+//    func playHammerSound() {
+//            // 1 - Create player
+//            let url = Bundle.main.url(forResource: "hammerSound", withExtension: "mp3")!
+//            let player = try! AVAudioPlayer(contentsOf: url)
+//            
+//            // 2 - Play sound
+//            player.play()
+//        }
     
     
     override func update(_ currentTime: CFTimeInterval) {
