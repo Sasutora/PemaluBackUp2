@@ -27,7 +27,7 @@ public func createCustomHapticPattern() -> CHHapticPattern {
                       parameters: [CHHapticEventParameter(parameterID: .hapticIntensity, value: 3),
                                    CHHapticEventParameter(parameterID: .hapticSharpness, value: 1)],
                       relativeTime: 0,
-                      duration: 0.2)
+                      duration: 0.1)
     ]
 
     do {
