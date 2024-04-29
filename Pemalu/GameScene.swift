@@ -40,7 +40,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        targetBody.categoryBitMask = 2
         
         manager.startAccelerometerUpdates()
-        manager.accelerometerUpdateInterval = 0.0025
+        manager.accelerometerUpdateInterval = 0.05
         manager.startAccelerometerUpdates(to: OperationQueue.main){
             (data, error) in
             self.physicsWorld.gravity = CGVectorMake(CGFloat(-1*(data?.acceleration.y)!) * 10, CGFloat((data?.acceleration.x)!) * 70)
