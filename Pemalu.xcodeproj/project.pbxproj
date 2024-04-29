@@ -12,6 +12,9 @@
 		BA18B0752BDEBA1700A2E801 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18B0742BDEBA1700A2E801 /* SoundEffect.swift */; };
 		BA18B07B2BDEC6B000A2E801 /* hamSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA18B07A2BDEC6B000A2E801 /* hamSound.wav */; };
 		BA18B0812BDECD5900A2E801 /* Hammer sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA18B0802BDECD5900A2E801 /* Hammer sound.mp3 */; };
+		BA6965142BDF419B005F5D54 /* EffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6965132BDF419B005F5D54 /* EffectManager.swift */; };
+		BA6965162BDF4E61005F5D54 /* voice.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BA6965152BDF4E61005F5D54 /* voice.m4a */; };
+		BA6965182BDF52D5005F5D54 /* hamSoundTrim.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA6965172BDF52D5005F5D54 /* hamSoundTrim.wav */; };
 		BAEAF19C2BDA63590046FA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEAF19B2BDA63590046FA86 /* AppDelegate.swift */; };
 		BAEAF19E2BDA63590046FA86 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BAEAF19D2BDA63590046FA86 /* GameScene.sks */; };
 		BAEAF1A02BDA63590046FA86 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BAEAF19F2BDA63590046FA86 /* Actions.sks */; };
@@ -28,6 +31,9 @@
 		BA18B0742BDEBA1700A2E801 /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		BA18B07A2BDEC6B000A2E801 /* hamSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hamSound.wav; sourceTree = "<group>"; };
 		BA18B0802BDECD5900A2E801 /* Hammer sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hammer sound.mp3"; sourceTree = "<group>"; };
+		BA6965132BDF419B005F5D54 /* EffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectManager.swift; sourceTree = "<group>"; };
+		BA6965152BDF4E61005F5D54 /* voice.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = voice.m4a; sourceTree = "<group>"; };
+		BA6965172BDF52D5005F5D54 /* hamSoundTrim.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hamSoundTrim.wav; sourceTree = "<group>"; };
 		BAEAF1982BDA63590046FA86 /* Pemalu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pemalu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEAF19B2BDA63590046FA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAEAF19D2BDA63590046FA86 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 				BA18B0742BDEBA1700A2E801 /* SoundEffect.swift */,
 				BA18B07A2BDEC6B000A2E801 /* hamSound.wav */,
 				BA18B0802BDECD5900A2E801 /* Hammer sound.mp3 */,
+				BA6965132BDF419B005F5D54 /* EffectManager.swift */,
+				BA6965152BDF4E61005F5D54 /* voice.m4a */,
+				BA6965172BDF52D5005F5D54 /* hamSoundTrim.wav */,
 			);
 			path = Pemalu;
 			sourceTree = "<group>";
@@ -150,7 +159,9 @@
 				BAEAF1A92BDA635B0046FA86 /* Assets.xcassets in Resources */,
 				BAEAF1A02BDA63590046FA86 /* Actions.sks in Resources */,
 				BAEAF1AC2BDA635B0046FA86 /* Base in Resources */,
+				BA6965182BDF52D5005F5D54 /* hamSoundTrim.wav in Resources */,
 				BA18B07B2BDEC6B000A2E801 /* hamSound.wav in Resources */,
+				BA6965162BDF4E61005F5D54 /* voice.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +175,7 @@
 				1A4843A62BDCF40E00B218F6 /* Haptic.swift in Sources */,
 				BAEAF1A22BDA63590046FA86 /* GameScene.swift in Sources */,
 				BA18B0752BDEBA1700A2E801 /* SoundEffect.swift in Sources */,
+				BA6965142BDF419B005F5D54 /* EffectManager.swift in Sources */,
 				1A4843A82BDCF49C00B218F6 /* CoreMotion.swift in Sources */,
 				BAEAF1A42BDA63590046FA86 /* GameViewController.swift in Sources */,
 				BAEAF19C2BDA63590046FA86 /* AppDelegate.swift in Sources */,

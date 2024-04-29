@@ -24,7 +24,7 @@ class Effect{
             audioPlayerNode.stop()
             name = sound
             engine = avEngine
-            let soundFile = NSURL(fileURLWithPath: Bundle.main.path(forResource: sound, ofType: "mp3")!) as URL
+            let soundFile = NSURL(fileURLWithPath: Bundle.main.path(forResource: sound, ofType: ".mp3")!) as URL
             
             try audioFile = AVAudioFile(forReading: soundFile)
             
@@ -106,5 +106,32 @@ class Sounds{
     func disposeSounds(){
         effects = []
     }
+    
+    private var audioPlayer : AVAudioPlayer?
+    
+    public func playHammerSound(name : String){
+      
+        guard let soundURL = Bundle.main.url(forResource: name, withExtension: "wav") else {
+            return
+        }
+        do{
+//                print("masuk play sound")
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+//                audioPlayer?.numberOfLoops = -1
+            audioPlayer?.rate = 2.0
+            audioPlayer?.play()
+//                print("exit play sound")
+        }catch{
+            print("error playing sound: \(error.localizedDescription)")
+        }
+        
+        
+    }
+    
+    public func stopHammerSound(){
+        audioPlayer?.stop()
+//        print("Stopped")
+    }
+    
     
 }
