@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A4843A62BDCF40E00B218F6 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4843A52BDCF40E00B218F6 /* Haptic.swift */; };
 		1A4843A82BDCF49C00B218F6 /* CoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4843A72BDCF49C00B218F6 /* CoreMotion.swift */; };
+		1A4843B12BDF8B1600B218F6 /* ColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4843B02BDF8B1600B218F6 /* ColorAnimation.swift */; };
 		BA18B0752BDEBA1700A2E801 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18B0742BDEBA1700A2E801 /* SoundEffect.swift */; };
 		BA18B07B2BDEC6B000A2E801 /* hamSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA18B07A2BDEC6B000A2E801 /* hamSound.wav */; };
 		BA18B0812BDECD5900A2E801 /* Hammer sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA18B0802BDECD5900A2E801 /* Hammer sound.mp3 */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		1A4843A52BDCF40E00B218F6 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		1A4843A72BDCF49C00B218F6 /* CoreMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotion.swift; sourceTree = "<group>"; };
+		1A4843B02BDF8B1600B218F6 /* ColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnimation.swift; sourceTree = "<group>"; };
 		BA18B0742BDEBA1700A2E801 /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		BA18B07A2BDEC6B000A2E801 /* hamSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hamSound.wav; sourceTree = "<group>"; };
 		BA18B0802BDECD5900A2E801 /* Hammer sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hammer sound.mp3"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				BA6965132BDF419B005F5D54 /* EffectManager.swift */,
 				BA6965152BDF4E61005F5D54 /* voice.m4a */,
 				BA6965172BDF52D5005F5D54 /* hamSoundTrim.wav */,
+				1A4843B02BDF8B1600B218F6 /* ColorAnimation.swift */,
 			);
 			path = Pemalu;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				BA6965142BDF419B005F5D54 /* EffectManager.swift in Sources */,
 				1A4843A82BDCF49C00B218F6 /* CoreMotion.swift in Sources */,
 				BAEAF1A42BDA63590046FA86 /* GameViewController.swift in Sources */,
+				1A4843B12BDF8B1600B218F6 /* ColorAnimation.swift in Sources */,
 				BAEAF19C2BDA63590046FA86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CAPH2JRFFZ;
+				DEVELOPMENT_TEAM = 3G6F9PLS9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -343,7 +347,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pang.Pemalu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rama.Pemalu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -358,7 +362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CAPH2JRFFZ;
+				DEVELOPMENT_TEAM = 3G6F9PLS9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -371,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pang.Pemalu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rama.Pemalu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

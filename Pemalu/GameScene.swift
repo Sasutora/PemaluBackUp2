@@ -13,7 +13,39 @@ import AVFoundation
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
+    var colorOverlays = [SKShapeNode]()
+        var currentColorIndex = 0
+    var animationFinished = false
+        func createOverlay(withColor color: UIColor, rect: CGRect) -> SKShapeNode {
+            let overlay = SKShapeNode(rect: rect)
+            overlay.fillColor = color
+            overlay.alpha = 0.0 // Start with alpha 0
+            overlay.zPosition = 100 // Ensure it's above other nodes
+            return overlay
+        }
+        
+        func animateColorOverlay() {
+            // Animate the overlay with the current color
+            let currentOverlay = colorOverlays[currentColorIndex]
+            let fadeInAction = SKAction.fadeAlpha(to: 0.5, duration: 0.5)
+            let waitAction = SKAction.wait(forDuration: 1.0)
+            let fadeOutAction = SKAction.fadeAlpha(to: 0.0, duration: 0.5)
+            let sequence = SKAction.sequence([fadeInAction, waitAction, fadeOutAction])
+            
+            // Move to the next color overlay
+            currentColorIndex = (currentColorIndex + 1) % colorOverlays.count
+            
+            // Run the animation and recursively call animateColorOverlay after completion
+            currentOverlay.run(sequence) {
+                if self.currentColorIndex == 0 {
+                                               // Set animationFinished to true after completing one full cycle
+                                               self.animationFinished = true
+                                           } else {
+                                               // Recursively call animateColorOverlay for the next color overlay
+                                               self.animateColorOverlay()
+                                           }
+            }
+        }
     let manager = CMMotionManager()
     var player = SKSpriteNode()
     var playerTexture = SKTexture(imageNamed: "hammer")
@@ -64,6 +96,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.add(pinJoint)
         
 //        self.sounds.play("Hammer sound")
+//        guard let sceneFrame = self.view?.frame else { return }
+            // Create red, yellow, and green rectangles
+            let overlayRect = CGRect(x: -1000, y: -1000, width: 2000, height: 2000)
+            let redOverlay = createOverlay(withColor: .red, rect: overlayRect)
+            let yellowOverlay = createOverlay(withColor: .yellow, rect: overlayRect)
+            let greenOverlay = createOverlay(withColor: .green, rect: overlayRect)
+            
+            // Add overlays to the scene
+            colorOverlays.append(redOverlay)
+            colorOverlays.append(yellowOverlay)
+            colorOverlays.append(greenOverlay)
+            self.addChild(redOverlay)
+            self.addChild(yellowOverlay)
+            self.addChild(greenOverlay)
+            
+            // Start the animation
+            animateColorOverlay()
         
     }
     
